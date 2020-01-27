@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Climbing Terms Generator</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div class="term" id="verb"></div>
+    <div class="term" id="adjective"></div>
+    <div class="term" id="noun"></div>
+    <button onClick="generateTerm()">Generate</button>
+    <script>
+      function generateTerm() {
+        const verb = terms.verbs[getRandomInt(terms.verbs.length)];
+        const adjective =
+          terms.adjectives[getRandomInt(terms.adjectives.length)];
+        const noun = terms.nouns[getRandomInt(terms.nouns.length)];
+
+        document.getElementById("verb").innerHTML = verb;
+        document.getElementById("adjective").innerHTML = adjective;
+        document.getElementById("noun").innerHTML = noun;
+      }
+
+      function getRandomInt(last) {
+        return Math.floor(Math.random() * Math.floor(last));
+      }
+
+      const terms = {
+        verbs: [
+          "backclip",
+          "backstep",
+          "belay",
+          "flash",
+          "send",
+          "on-sight",
+          "gaston",
+          "smear"
+        ],
+        adjectives: [
+          "bomber",
+          "dynamic",
+          "mono",
+          "crimpy",
+          "slopey",
+          "slabby",
+          "pumped"
+        ],
+        nouns: [
+          "anchor",
+          "arete",
+          "beta",
+          "bolt",
+          "chimney",
+          "crimp",
+          "crack",
+          "fist jam",
+          "heel hook",
+          "highball",
+          "jug",
+          "pitch",
+          "rack",
+          "sloper",
+          "undercling",
+          "whipper",
+          "meat wrap"
+        ]
+      };
+    </script>
+  </body>
+</html>
