@@ -14,14 +14,10 @@
     <button onClick="generateTerm()">Generate</button>
     <script>
       function generateTerm() {
-        const verb = terms.verbs[getRandomInt(terms.verbs.length)];
-        const adjective =
-          terms.adjectives[getRandomInt(terms.adjectives.length)];
-        const noun = terms.nouns[getRandomInt(terms.nouns.length)];
-
-        document.getElementById("verb").innerHTML = verb;
-        document.getElementById("adjective").innerHTML = adjective;
-        document.getElementById("noun").innerHTML = noun;
+        for (let type in terms) {
+          document.getElementById(type).innerHTML =
+            terms[type][getRandomInt(terms[type].length)];
+        }
       }
 
       function getRandomInt(last) {
@@ -29,7 +25,7 @@
       }
 
       const terms = {
-        verbs: [
+        verb: [
           "backclip",
           "backstep",
           "belay",
@@ -39,7 +35,7 @@
           "gaston",
           "smear"
         ],
-        adjectives: [
+        adjective: [
           "bomber",
           "dynamic",
           "mono",
@@ -48,7 +44,7 @@
           "slabby",
           "pumped"
         ],
-        nouns: [
+        noun: [
           "anchor",
           "arete",
           "beta",
