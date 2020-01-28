@@ -9,20 +9,34 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <style></style>
+    <style>
+      .term {
+        visibility: hidden;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="term" id="verb"></div>
-    <div class="term" id="adjective"></div>
-    <div class="term" id="noun"></div>
-    <button onClick="generateTerm()">Generate</button>
+    <div class="container">
+      <div class="row center" id="sentence">
+        <span class="term" id="verb"></span>
+        <span class="term" id="the">the</span>
+        <span class="term" id="adjective"></span>
+        <span class="term" id="noun"></span>
+      </div>
+      <div class="row center">
+        <button class="center" onClick="generateTerm()">Generate</button>
+      </div>
+    </div>
+
     <script>
       function generateTerm() {
         for (let type in terms) {
           document.getElementById(type).innerHTML =
             terms[type][getRandomInt(terms[type].length)];
+          document.getElementById(type).style.visibility = "visible";
         }
+        document.getElementById("the").style.visibility = "visible";
       }
 
       function getRandomInt(last) {
