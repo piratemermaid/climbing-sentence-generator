@@ -20,19 +20,26 @@
         -o-background-size: cover;
         background-size: cover;
       }
+      html,
+      body,
+      .valign-wrapper {
+        height: 100%;
+      }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="row center" id="sentence">
-        <span class="term" id="verb"></span>
-        <span class="term" id="the">the</span>
-        <span class="term" id="adjective"></span>
-        <span class="term" id="noun"></span>
-      </div>
-      <div class="row center">
-        <button class="center" onClick="generateTerm()">Generate</button>
+    <div class="valign-wrapper">
+      <div class="container">
+        <div class="row center" id="sentence">
+          <span class="term" id="verb"></span>
+          <span class="term" id="the">the</span>
+          <span class="term" id="adjective"></span>
+          <span class="term" id="noun"></span>
+        </div>
+        <div class="row center">
+          <button class="center" onClick="generateTerm()">Generate</button>
+        </div>
       </div>
     </div>
 
