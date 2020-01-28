@@ -5,15 +5,52 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
 html,
 body,
 .valign-wrapper {
   height: 100%;
 }
+
+#sentence span {
+  color: white;
+}
+
 .term {
   visibility: hidden;
   margin: 2px;
 }
-#sentence span {
-  color: white;
+
+span.term {
+  font-size: 50px;
+}
+
+.btn {
+  font-size: 26px;
+  padding: 10px;
+  height: 100%;
+}
+
+/* phone */
+@media only screen and (max-width: 599px) {
+  span.term {
+    font-size: 38px;
+  }
+  .btn {
+    font-size: 20px;
+    padding: 8px;
+    height: 100%;
+  }
+}
+
+/* tablet */
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  span.term {
+    font-size: 48px;
+  }
+  .btn {
+    font-size: 36px;
+    padding: 18px;
+    height: 100%;
+  }
 }
