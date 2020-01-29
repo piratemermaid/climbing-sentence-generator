@@ -30,60 +30,7 @@
       </div>
     </div>
 
-    <script>
-      function generateTerm() {
-        for (let type in terms) {
-          document.getElementById(type).innerHTML =
-            terms[type][getRandomInt(terms[type].length)];
-          document.getElementById(type).style.visibility = "visible";
-        }
-        document.getElementById("the").style.visibility = "visible";
-      }
-
-      function getRandomInt(last) {
-        return Math.floor(Math.random() * Math.floor(last));
-      }
-
-      const terms = {
-        verb: [
-          "backclip",
-          "backstep",
-          "belay",
-          "flash",
-          "send",
-          "on-sight",
-          "gaston",
-          "smear"
-        ],
-        adjective: [
-          "bomber",
-          "dynamic",
-          "mono",
-          "crimpy",
-          "slopey",
-          "slabby",
-          "pumped"
-        ],
-        noun: [
-          "anchor",
-          "arete",
-          "beta",
-          "bolt",
-          "chimney",
-          "crimp",
-          "crack",
-          "fist jam",
-          "heel hook",
-          "highball",
-          "jug",
-          "pitch",
-          "rack",
-          "sloper",
-          "undercling",
-          "whipper",
-          "meat wrap"
-        ]
-      };
-    </script>
+    <script src="terms.js"></script>
+    <script src="generate.js"></script>
   </body>
 </html>
