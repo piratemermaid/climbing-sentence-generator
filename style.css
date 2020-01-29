@@ -12,12 +12,15 @@ body,
   height: 100%;
 }
 
+#sentence {
+  display: none;
+}
+
 #sentence span {
   color: white;
 }
 
 .term {
-  visibility: hidden;
   margin: 2px;
 }
 

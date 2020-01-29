@@ -1,10 +1,11 @@
 function generateTerm() {
-  for (let type in terms) {
-    document.getElementById(type).innerHTML =
-      terms[type][getRandomInt(terms[type].length)];
-    document.getElementById(type).style.visibility = "visible";
-  }
-  document.getElementById("the").style.visibility = "visible";
+  $("#sentence").fadeOut(function() {
+    for (let type in terms) {
+      document.getElementById(type).innerHTML =
+        terms[type][getRandomInt(terms[type].length)];
+    }
+    $("#sentence").fadeIn();
+  });
 }
 
 function getRandomInt(last) {
